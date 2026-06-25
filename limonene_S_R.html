@@ -1,167 +1,31 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
 <style>
-    /* 画面全体の余白をゼロにし、スクロールを完全に固定 */
+    /* 画面自体の余白をなくし、はみ出し（スクロールバー）を完全に禁止する */
     html, body {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        position: fixed;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        overflow: hidden !important;
+        position: fixed !important;
+        background-color: white; /* 背景色 */
     }
-    /* py3Dmolを表示する枠を画面サイズぴったり（縦横100%）に指定 */
-    #gander_container {
+
+    /* py3Dmolが生成するすべてのコンテナ要素を強制的に画面ぴったりに引き伸ばす */
+    div[id^="3dmolviewer"], div.viewer_3dmol, [id^="3dmol"] {
         width: 100vw !important;
         height: 100vh !important;
-        position: absolute;
-        top: 0;
-        left: 0;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
     }
 </style>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-
-<style>
-    /* 画面全体の余白をゼロにし、スクロールを完全に固定 */
-    html, body {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        position: fixed;
-    }
-    /* py3Dmolを表示する枠を画面サイズぴったり（縦横100%）に指定 */
-    #gander_container {
-        width: 100vw !important;
-        height: 100vh !important;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-</style>
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-
-<style>
-    /* 画面全体の余白をゼロにし、スクロールを完全に固定 */
-    html, body {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        position: fixed;
-    }
-    /* py3Dmolを表示する枠を画面サイズぴったり（縦横100%）に指定 */
-    #gander_container {
-        width: 100vw !important;
-        height: 100vh !important;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-</style>
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-
-<style>
-    html, body {
-        position: fixed;
-        overflow: hidden;
-        width: 100%;
-        height: 100%;
-        touch-action: none; /* スマホのデフォルトの画面スクロールやピンチを無効化 */
-    }
-</style>
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-
-<style>
-    html, body {
-        position: fixed;
-        overflow: hidden;
-        width: 100%;
-        height: 100%;
-        touch-action: none; /* スマホのデフォルトの画面スクロールやピンチを無効化 */
-    }
-</style>
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-
-<style>
-    html, body {
-        position: fixed;
-        overflow: hidden;
-        width: 100%;
-        height: 100%;
-        touch-action: none; /* スマホのデフォルトの画面スクロールやピンチを無効化 */
-    }
-</style>
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-
-<style>
-    html, body {
-        position: fixed;
-        overflow: hidden;
-        width: 100%;
-        height: 100%;
-        touch-action: none; /* スマホのデフォルトの画面スクロールやピンチを無効化 */
-    }
-</style>
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-
-<style>
-    html, body {
-        position: fixed;
-        overflow: hidden;
-        width: 100%;
-        height: 100%;
-        touch-action: none; /* スマホのデフォルトの画面スクロールやピンチを無効化 */
-    }
-</style>
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-
-<style>
-    html, body {
-        position: fixed;
-        overflow: hidden;
-        width: 100%;
-        height: 100%;
-        touch-action: none; /* スマホのデフォルトの画面スクロールやピンチを無効化 */
-    }
-</style>
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-
-<style>
-    html, body {
-        position: fixed;
-        overflow: hidden;
-        width: 100%;
-        height: 100%;
-        touch-action: none; /* スマホのデフォルトの画面スクロールやピンチを無効化 */
-    }
-</style>
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-
-<style>
-    html, body {
-        position: fixed;
-        overflow: hidden;
-        width: 100%;
-        height: 100%;
-        touch-action: none; /* スマホのデフォルトの画面スクロールやピンチを無効化 */
-    }
-</style>
-
-<div id="3dmolviewer_1782342581542592"  style="position: relative; width: 1000px; height: 1000px;">
-        <p id="3dmolwarning_1782342581542592" style="background-color:#ffcccc;color:black">You appear to be running in JupyterLab (or JavaScript failed to load for some other reason).  You need to install the 3dmol extension: <br>
+<div id="3dmolviewer_1782347929316967"  style="position: relative; width: 100%; height: 100%;">
+        <p id="3dmolwarning_1782347929316967" style="background-color:#ffcccc;color:black">You appear to be running in JupyterLab (or JavaScript failed to load for some other reason).  You need to install the 3dmol extension: <br>
         <tt>jupyter labextension install jupyterlab_3dmol</tt></p>
         </div>
 <script>
@@ -193,69 +57,29 @@ $3Dmolpromise = null;
   $3Dmolpromise = loadScriptAsync('https://cdnjs.cloudflare.com/ajax/libs/3Dmol/2.0.4/3Dmol-min.js');
 }
 
-var viewer_1782342581542592 = null;
-var warn = document.getElementById("3dmolwarning_1782342581542592");
+var viewer_1782347929316967 = null;
+var warn = document.getElementById("3dmolwarning_1782347929316967");
 if(warn) {
     warn.parentNode.removeChild(warn);
 }
 $3Dmolpromise.then(function() {
-viewer_1782342581542592 = $3Dmol.createViewer(document.getElementById("3dmolviewer_1782342581542592"),{backgroundColor:"white"});
-viewer_1782342581542592.zoomTo();
-	viewer_1782342581542592.setBackgroundColor("white");
-	viewer_1782342581542592.addModel("\n     RDKit          3D\n\n 26 26  0  0  0  0  0  0  0  0999 V2000\n    3.6662    0.0962   -3.6665 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.6678    0.0080   -2.1680 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.8033   -0.1209   -1.4599 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.8503   -0.1685    0.0424 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.5288    0.2548    0.7219 C   0  0  1  0  0  0  0  0  0  0  0  0\n    2.3432   -0.3742   -0.0335 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.3177    0.0715   -1.4993 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.5703   -0.0269    2.2246 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.8620   -0.9879    2.8429 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.4646    0.8836    3.0291 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.6787    0.0604   -4.0822 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.0994   -0.7362   -4.0958 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.2057    1.0352   -3.9900 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.7611   -0.1865   -1.9712 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.1268   -1.1872    0.3428 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.6589    0.4926    0.3774 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.4214    1.3444    0.6103 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.3923   -0.0973    0.4379 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.4126   -1.4698   -0.0006 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.6045   -0.5627   -2.0393 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.9453    1.1015   -1.5624 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.2032   -1.6644    2.3095 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.9252   -1.1346    3.9176 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.1858    1.9300    2.8677 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.3932    0.6874    4.1044 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.5116    0.7516    2.7400 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  2  3  2  0\n  3  4  1  0\n  4  5  1  0\n  5  6  1  0\n  6  7  1  0\n  5  8  1  0\n  8  9  2  0\n  8 10  1  0\n  7  2  1  0\n  1 11  1  0\n  1 12  1  0\n  1 13  1  0\n  3 14  1  0\n  4 15  1  0\n  4 16  1  0\n  5 17  1  1\n  6 18  1  0\n  6 19  1  0\n  7 20  1  0\n  7 21  1  0\n  9 22  1  0\n  9 23  1  0\n 10 24  1  0\n 10 25  1  0\n 10 26  1  0\nM  END\n","mol");
-	viewer_1782342581542592.setStyle({"model": 0, "elem": "C"},{"stick": {"color": "orange", "radius": 0.15, "outline": true, "ambient": 1.0, "specular": 0.0}});
-	viewer_1782342581542592.setStyle({"model": 0, "elem": "H"},{"stick": {"color": "white", "radius": 0.08, "ambient": 1.0, "specular": 0.0}});
-	viewer_1782342581542592.addSurface(1,{"opacity": 0.5, "color": "orange"});
-	viewer_1782342581542592.addModel("\n     RDKit          3D\n\n 26 26  0  0  0  0  0  0  0  0999 V2000\n   -3.6662    0.0962   -3.6665 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.6678    0.0080   -2.1680 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.8033   -0.1209   -1.4599 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.8503   -0.1685    0.0424 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.5288    0.2548    0.7219 C   0  0  2  0  0  0  0  0  0  0  0  0\n   -2.3432   -0.3742   -0.0335 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.3177    0.0715   -1.4993 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.5703   -0.0269    2.2246 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.8620   -0.9879    2.8429 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.4646    0.8836    3.0291 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.6787    0.0604   -4.0822 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.0994   -0.7362   -4.0958 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.2057    1.0352   -3.9900 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -5.7611   -0.1865   -1.9712 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -5.1268   -1.1872    0.3428 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -5.6589    0.4926    0.3774 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.4214    1.3444    0.6103 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.3923   -0.0973    0.4379 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.4126   -1.4698   -0.0006 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.6045   -0.5627   -2.0393 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.9453    1.1015   -1.5624 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.2032   -1.6644    2.3095 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.9252   -1.1346    3.9176 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.1858    1.9300    2.8677 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.3932    0.6874    4.1044 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -5.5116    0.7516    2.7400 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  2  3  2  0\n  3  4  1  0\n  4  5  1  0\n  5  6  1  0\n  6  7  1  0\n  5  8  1  0\n  8  9  2  0\n  8 10  1  0\n  7  2  1  0\n  1 11  1  0\n  1 12  1  0\n  1 13  1  0\n  3 14  1  0\n  4 15  1  0\n  4 16  1  0\n  5 17  1  6\n  6 18  1  0\n  6 19  1  0\n  7 20  1  0\n  7 21  1  0\n  9 22  1  0\n  9 23  1  0\n 10 24  1  0\n 10 25  1  0\n 10 26  1  0\nM  END\n","mol");
-	viewer_1782342581542592.setStyle({"model": 1, "elem": "C"},{"stick": {"color": "yellow", "radius": 0.15, "outline": true, "ambient": 1.0, "specular": 0.0}});
-	viewer_1782342581542592.setStyle({"model": 1, "elem": "H"},{"stick": {"color": "white", "radius": 0.08, "ambient": 1.0, "specular": 0.0}});
-	viewer_1782342581542592.addSurface(1,{"opacity": 0.5, "color": "yellow"});
-	viewer_1782342581542592.rotate(105,"x");
-	viewer_1782342581542592.zoomTo();
-	viewer_1782342581542592.zoom(0.85,0);
-viewer_1782342581542592.render();
+viewer_1782347929316967 = $3Dmol.createViewer(document.getElementById("3dmolviewer_1782347929316967"),{backgroundColor:"white"});
+viewer_1782347929316967.zoomTo();
+	viewer_1782347929316967.setBackgroundColor("white");
+	viewer_1782347929316967.addModel("\n     RDKit          3D\n\n 26 26  0  0  0  0  0  0  0  0999 V2000\n    3.6662    0.0962   -3.6665 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.6678    0.0080   -2.1680 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.8033   -0.1209   -1.4599 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.8503   -0.1685    0.0424 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.5288    0.2548    0.7219 C   0  0  1  0  0  0  0  0  0  0  0  0\n    2.3432   -0.3742   -0.0335 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.3177    0.0715   -1.4993 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.5703   -0.0269    2.2246 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.8620   -0.9879    2.8429 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.4646    0.8836    3.0291 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.6787    0.0604   -4.0822 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.0994   -0.7362   -4.0958 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.2057    1.0352   -3.9900 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.7611   -0.1865   -1.9712 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.1268   -1.1872    0.3428 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.6589    0.4926    0.3774 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.4214    1.3444    0.6103 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.3923   -0.0973    0.4379 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.4126   -1.4698   -0.0006 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.6045   -0.5627   -2.0393 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.9453    1.1015   -1.5624 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.2032   -1.6644    2.3095 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.9252   -1.1346    3.9176 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.1858    1.9300    2.8677 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.3932    0.6874    4.1044 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.5116    0.7516    2.7400 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  2  3  2  0\n  3  4  1  0\n  4  5  1  0\n  5  6  1  0\n  6  7  1  0\n  5  8  1  0\n  8  9  2  0\n  8 10  1  0\n  7  2  1  0\n  1 11  1  0\n  1 12  1  0\n  1 13  1  0\n  3 14  1  0\n  4 15  1  0\n  4 16  1  0\n  5 17  1  1\n  6 18  1  0\n  6 19  1  0\n  7 20  1  0\n  7 21  1  0\n  9 22  1  0\n  9 23  1  0\n 10 24  1  0\n 10 25  1  0\n 10 26  1  0\nM  END\n","mol");
+	viewer_1782347929316967.setStyle({"model": 0, "elem": "C"},{"stick": {"color": "orange", "radius": 0.15, "outline": true, "ambient": 1.0, "specular": 0.0}});
+	viewer_1782347929316967.setStyle({"model": 0, "elem": "H"},{"stick": {"color": "white", "radius": 0.08, "ambient": 1.0, "specular": 0.0}});
+	viewer_1782347929316967.addSurface(1,{"opacity": 0.5, "color": "orange"});
+	viewer_1782347929316967.addModel("\n     RDKit          3D\n\n 26 26  0  0  0  0  0  0  0  0999 V2000\n   -3.6662    0.0962   -3.6665 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.6678    0.0080   -2.1680 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.8033   -0.1209   -1.4599 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.8503   -0.1685    0.0424 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.5288    0.2548    0.7219 C   0  0  2  0  0  0  0  0  0  0  0  0\n   -2.3432   -0.3742   -0.0335 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.3177    0.0715   -1.4993 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.5703   -0.0269    2.2246 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.8620   -0.9879    2.8429 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.4646    0.8836    3.0291 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.6787    0.0604   -4.0822 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.0994   -0.7362   -4.0958 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.2057    1.0352   -3.9900 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -5.7611   -0.1865   -1.9712 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -5.1268   -1.1872    0.3428 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -5.6589    0.4926    0.3774 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.4214    1.3444    0.6103 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.3923   -0.0973    0.4379 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.4126   -1.4698   -0.0006 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.6045   -0.5627   -2.0393 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.9453    1.1015   -1.5624 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.2032   -1.6644    2.3095 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.9252   -1.1346    3.9176 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.1858    1.9300    2.8677 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.3932    0.6874    4.1044 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -5.5116    0.7516    2.7400 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  2  3  2  0\n  3  4  1  0\n  4  5  1  0\n  5  6  1  0\n  6  7  1  0\n  5  8  1  0\n  8  9  2  0\n  8 10  1  0\n  7  2  1  0\n  1 11  1  0\n  1 12  1  0\n  1 13  1  0\n  3 14  1  0\n  4 15  1  0\n  4 16  1  0\n  5 17  1  6\n  6 18  1  0\n  6 19  1  0\n  7 20  1  0\n  7 21  1  0\n  9 22  1  0\n  9 23  1  0\n 10 24  1  0\n 10 25  1  0\n 10 26  1  0\nM  END\n","mol");
+	viewer_1782347929316967.setStyle({"model": 1, "elem": "C"},{"stick": {"color": "yellow", "radius": 0.15, "outline": true, "ambient": 1.0, "specular": 0.0}});
+	viewer_1782347929316967.setStyle({"model": 1, "elem": "H"},{"stick": {"color": "white", "radius": 0.08, "ambient": 1.0, "specular": 0.0}});
+	viewer_1782347929316967.addSurface(1,{"opacity": 0.5, "color": "yellow"});
+	viewer_1782347929316967.rotate(105,"x");
+	viewer_1782347929316967.zoomTo();
+	viewer_1782347929316967.zoom(0.85,0);
+viewer_1782347929316967.render();
 });
 </script>
-<footer style="position: fixed; bottom: 0; left: 0; width: 100%; text-align: center; padding: 10px; color: #666; font-size: 11px; font-family: sans-serif; background: rgba(255,255,255,0.8); z-index: 9999;">
-    <span>© 2026 あなたの名前 (Your Name) | Licensed under <a href="https://opensource.org" target="_blank">MIT License</a> | <a href="https://github.com" target="_blank">GitHub</a></span>
-</footer>
-
-<footer style="position: fixed; bottom: 0; left: 0; width: 100%; text-align: center; padding: 10px; color: #666; font-size: 11px; font-family: sans-serif; background: rgba(255,255,255,0.8); z-index: 9999;">
-    <span>© 2026 shunsuketakano | Licensed under <a href="https://opensource.org" target="_blank">MIT License</a> | <a href="https://github.com/shunsuketakano" target="_blank">GitHub</a></span>
-</footer>
-
-<footer style="position: fixed; bottom: 0; left: 0; width: 100%; text-align: center; padding: 10px; color: #666; font-size: 11px; font-family: sans-serif; background: rgba(255,255,255,0.8); z-index: 9999;">
-    <span>© 2026 shunsuketakano | Licensed under <a href="https://opensource.org" target="_blank">MIT License</a> | <a href="https://github.com/shunsuketakano" target="_blank">GitHub</a></span>
-</footer>
-
-<footer style="position: fixed; bottom: 0; left: 0; width: 100%; text-align: center; padding: 10px; color: #666; font-size: 11px; font-family: sans-serif; background: rgba(255,255,255,0.8); z-index: 9999;">
-    <span>&copy; 2026 shunsuketakano | Licensed under <a href="https://opensource.org" target="_blank">MIT License</a> | <a href="https://github.com/shunsuketakano" target="_blank">GitHub</a></span>
-</footer>
-
-<footer style="position: fixed; bottom: 0; left: 0; width: 100%; text-align: center; padding: 10px; color: #666; font-size: 11px; font-family: sans-serif; background: rgba(255,255,255,0.8); z-index: 9999;">
-    <span>&copy; 2026 shunsuketakano | Licensed under <a href="https://opensource.org" target="_blank">MIT License</a> | <a href="https://github.com/shunsuketakano" target="_blank">GitHub</a></span>
-</footer>
-
-<footer style="position: fixed; bottom: 0; left: 0; width: 100%; text-align: center; padding: 10px; color: #666; font-size: 11px; font-family: sans-serif; background: rgba(255,255,255,0.8); z-index: 9999;">
-    <span>&copy; 2026 shunsuketakano | Licensed under <a href="https://opensource.org" target="_blank">MIT License</a> | <a href="https://github.com/shunsuketakano" target="_blank">GitHub</a></span>
-</footer>
-
-<footer style="position: fixed; bottom: 0; left: 0; width: 100%; text-align: center; padding: 8px 0; color: #666; font-size: 11px; font-family: sans-serif; background: rgba(255,255,255,0.85); z-index: 9999; pointer-events: none;">
+<footer style="position: fixed; bottom: 0; left: 0; width: 100%; text-align: center; padding: 6px 0; color: #666; font-size: 11px; font-family: sans-serif; background: rgba(255,255,255,0.8); z-index: 9999; pointer-events: none;">
     <span style="pointer-events: auto;">&copy; 2026 shunsuketakano | Licensed under <a href="https://opensource.org" target="_blank">MIT License</a> | <a href="https://github.com/shunsuketakano" target="_blank">GitHub</a></span>
-</footer>
-
-<footer style="position: fixed; bottom: 0; left: 0; width: 100%; text-align: center; padding: 8px 0; color: #666; font-size: 11px; font-family: sans-serif; background: rgba(255,255,255,0.85); z-index: 9999; pointer-events: none;">
-    <span style="pointer-events: auto;">&copy; 2026 shunsuketakano | Licensed under <a href="https://opensource.org" target="_blank">MIT License</a> | <a href="https://github.com/shunsuketakano" target="_blank">GitHub</a></span>
-</footer>
-
-<footer style="position: fixed; bottom: 0; left: 0; width: 100%; text-align: center; padding: 8px 0; color: #666; font-size: 11px; font-family: sans-serif; background: rgba(255,255,255,0.85); z-index: 9999; pointer-events: none;">
-    <span style="pointer-events: auto;">&copy; 2026 shunsuketakano | Licensed under <a href="https://opensource.org" target="_blank">MIT License</a> | <a href="https://github.com/shunsuketakano" target="_blank">GitHub</a></span>
-</footer>
-
-<footer style="position: fixed; bottom: 0; left: 0; width: 100%; text-align: center; padding: 8px 0; color: #666; font-size: 11px; font-family: sans-serif; background: rgba(255,255,255,0.85); z-index: 9999; pointer-events: none;">
-    <span style="pointer-events: auto;">&copy; 2026 shunsuketakano | Licensed under <a href="https://opensource.org" target="_blank">MIT License</a> | <a href="https://github.com/shunsuketakano" target="_blank">GitHub/shunsuketakano</a></span>
-</footer>
-
-<footer style="position: fixed; bottom: 0; left: 0; width: 100%; text-align: center; padding: 8px 0; color: #666; font-size: 11px; font-family: sans-serif; background: rgba(255,255,255,0.85); z-index: 9999; pointer-events: none;">
-    <span style="pointer-events: auto;">&copy; 2026 shunsuketakano | Licensed under <a href="https://opensource.org" target="_blank">MIT License</a> | <a href="https://github.com/shunsuketakano" target="_blank">GitHub/shunsuketakano</a></span>
 </footer>
