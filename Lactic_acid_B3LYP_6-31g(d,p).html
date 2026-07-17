@@ -14,11 +14,10 @@
         
         /* py3Dmolが生成するすべてのコンテナ要素を強制的に画面ぴったりに引き伸ばす */
         div[id^="3dmolviewer"], div.viewer_3dmol, [id^="3dmol"] {
-            width: 100vw !important;
-            height: 100vh !important;
-            position: absolute !important;
-            top: 0 !important;
-            left: 0 !important;
+			position: fixed;
+            inset: 0;
+            width: auto;
+            height: auto;
             margin: 0 !important;
             padding: 0 !important;
         }
