@@ -1,0 +1,108 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+ 
+    <style>
+        /* 画面自体の余白をなくし、はみ出し（スクロールバー）を完全に禁止する */
+        html, body {
+            margin: 0 !important;
+            padding: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            overflow: hidden !important;
+            position: fixed !important;
+            background-color: white; /* 背景色 */
+        }
+        
+        /* py3Dmolが生成するすべてのコンテナ要素を強制的に画面ぴったりに引き伸ばす */
+        div[id^="3dmolviewer"], div.viewer_3dmol, [id^="3dmol"] {
+            width: 100vw !important;
+            height: 100vh !important;
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+    </style>
+    
+<div id="3dmolviewer_17843343531021829"  style="position: relative; width: 100%; height: 100%;">
+        <p id="3dmolwarning_17843343531021829" style="background-color:#ffcccc;color:black">3Dmol.js failed to load for some reason.  Please check your browser console for error messages.<br></p>
+        </div>
+<script>
+
+var loadScriptAsync = function(uri){
+  return new Promise((resolve, reject) => {
+    //this is to ignore the existence of requirejs amd
+    var savedexports, savedmodule;
+    if (typeof exports !== 'undefined') savedexports = exports;
+    else exports = {}
+    if (typeof module !== 'undefined') savedmodule = module;
+    else module = {}
+
+    var tag = document.createElement('script');
+    tag.src = uri;
+    tag.async = true;
+    tag.onload = () => {
+        exports = savedexports;
+        module = savedmodule;
+        resolve();
+    };
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+});
+};
+
+if(typeof $3Dmolpromise === 'undefined') {
+$3Dmolpromise = null;
+  $3Dmolpromise = loadScriptAsync('https://cdn.jsdelivr.net/npm/3dmol@2.5.5/build/3Dmol-min.js');
+}
+
+var viewer_17843343531021829 = null;
+var warn = document.getElementById("3dmolwarning_17843343531021829");
+if(warn) {
+    warn.parentNode.removeChild(warn);
+}
+$3Dmolpromise.then(function() {
+viewer_17843343531021829 = $3Dmol.createViewer(document.getElementById("3dmolviewer_17843343531021829"),{backgroundColor:"white"});
+viewer_17843343531021829.zoomTo();
+	viewer_17843343531021829.addModel("\n     RDKit          3D\n\n 29 29  0  0  0  0  0  0  0  0999 V2000\n    2.3972    0.3464    3.0346 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.5009   -0.1957    2.1389 C   0  0  2  0  0  0  0  0  0  0  0  0\n    4.8961    0.0714    2.7022 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.9687   -0.3982    1.7323 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.8236    0.1859    0.4659 O   0  0  0  0  0  0  0  0  0  0  0  0\n    4.5882   -0.1190   -0.1499 C   0  0  1  0  0  0  0  0  0  0  0  0\n    3.4227    0.3658    0.7187 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.6018    0.5262   -1.5010 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.0660    0.0643   -2.6409 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.3494   -1.2487   -2.7684 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.1423    0.8668   -3.9074 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.4000    0.1231    2.6233 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.4500   -0.0886    4.0452 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.4771    1.4412    3.1383 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.3783   -1.2946    2.0678 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.0268   -0.4271    3.6777 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.0194    1.1558    2.8734 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.9351   -1.5063    1.6481 H   0  0  0  0  0  0  0  0  0  0  0  0\n    6.9741   -0.1279    2.0895 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.5044   -1.2225   -0.2492 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.4700    0.0863    0.2391 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.4523    1.4697    0.7538 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.1003    1.5027   -1.5094 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.7749   -1.8444   -3.5937 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.2863   -1.0883   -3.0184 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.3886   -1.8560   -1.8545 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.1338    1.0950   -4.2941 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.6589    0.3005   -4.7015 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.6755    1.8164   -3.7604 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  2  3  1  0\n  3  4  1  0\n  4  5  1  0\n  5  6  1  0\n  6  7  1  0\n  6  8  1  0\n  8  9  2  3\n  9 10  1  0\n  9 11  1  0\n  7  2  1  0\n  1 12  1  0\n  1 13  1  0\n  1 14  1  0\n  2 15  1  6\n  3 16  1  0\n  3 17  1  0\n  4 18  1  0\n  4 19  1  0\n  6 20  1  6\n  7 21  1  0\n  7 22  1  0\n  8 23  1  0\n 10 24  1  0\n 10 25  1  0\n 10 26  1  0\n 11 27  1  0\n 11 28  1  0\n 11 29  1  0\nM  END\n","mol");
+	viewer_17843343531021829.setStyle({"model": 0},{"stick": {"colorscheme": "Jmol", "radius": 0.2}, "sphere": {"colorscheme": "Jmol", "scale": 0.25}});
+	viewer_17843343531021829.setStyle({"model": 0, "elem": "C"},{"stick": {"color": "orange", "radius": 0.2}, "sphere": {"color": "orange", "scale": 0.25}});
+	viewer_17843343531021829.setStyle({"model": 0, "elem": "H"},{"stick": {"color": "white", "radius": 0.2}, "sphere": {"color": "white", "scale": 0.25}});
+	viewer_17843343531021829.addModel("\n     RDKit          3D\n\n 29 29  0  0  0  0  0  0  0  0999 V2000\n   -2.3972    0.3464    3.0346 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.5009   -0.1957    2.1389 C   0  0  1  0  0  0  0  0  0  0  0  0\n   -4.8961    0.0714    2.7022 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -5.9687   -0.3982    1.7323 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -5.8236    0.1859    0.4659 O   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.5882   -0.1190   -0.1499 C   0  0  2  0  0  0  0  0  0  0  0  0\n   -3.4227    0.3658    0.7187 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.6018    0.5262   -1.5010 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.0660    0.0643   -2.6409 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.3494   -1.2487   -2.7684 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.1423    0.8668   -3.9074 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.4000    0.1231    2.6233 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.4500   -0.0886    4.0452 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.4771    1.4412    3.1383 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.3783   -1.2946    2.0678 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -5.0268   -0.4271    3.6777 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -5.0194    1.1558    2.8734 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -5.9351   -1.5063    1.6481 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -6.9741   -0.1279    2.0895 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.5044   -1.2225   -0.2492 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.4700    0.0863    0.2391 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.4523    1.4697    0.7538 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -5.1003    1.5027   -1.5094 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.7749   -1.8444   -3.5937 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.2863   -1.0883   -3.0184 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.3886   -1.8560   -1.8545 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.1338    1.0950   -4.2941 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.6589    0.3005   -4.7015 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.6755    1.8164   -3.7604 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  2  3  1  0\n  3  4  1  0\n  4  5  1  0\n  5  6  1  0\n  6  7  1  0\n  6  8  1  0\n  8  9  2  3\n  9 10  1  0\n  9 11  1  0\n  7  2  1  0\n  1 12  1  0\n  1 13  1  0\n  1 14  1  0\n  2 15  1  1\n  3 16  1  0\n  3 17  1  0\n  4 18  1  0\n  4 19  1  0\n  6 20  1  1\n  7 21  1  0\n  7 22  1  0\n  8 23  1  0\n 10 24  1  0\n 10 25  1  0\n 10 26  1  0\n 11 27  1  0\n 11 28  1  0\n 11 29  1  0\nM  END\n","mol");
+	viewer_17843343531021829.setStyle({"model": 1},{"stick": {"colorscheme": "Jmol", "radius": 0.2}, "sphere": {"colorscheme": "Jmol", "scale": 0.25}});
+	viewer_17843343531021829.setStyle({"model": 1, "elem": "C"},{"stick": {"color": "yellow", "radius": 0.2}, "sphere": {"color": "yellow", "scale": 0.25}});
+	viewer_17843343531021829.setStyle({"model": 1, "elem": "H"},{"stick": {"color": "white", "radius": 0.2}, "sphere": {"color": "white", "scale": 0.25}});
+	viewer_17843343531021829.setStyle({"model": 0, "serial": 16},{"stick": {"color": "red"}, "sphere": {"color": "red", "scale": 0.3}});
+	viewer_17843343531021829.rotate(90,"x");
+	viewer_17843343531021829.zoomTo();
+viewer_17843343531021829.render();
+});
+</script>
+        <header 
+            style="position: fixed; top: 20px; left: 50%; 
+            transform: translateX(-50%); 
+            z-index: 9999; pointer-events: none; 
+            text-align: center; width: 100%;">
+            <h1 style="margin: 0; padding: 0; 
+                font-family: sans-serif; font-size: 24px; color: #000000; font-weight: bold; 
+                letter-spacing: 0.5px;">
+                    Rose_oxide
+            </h1>
+        </header>
+    
+
+        <footer 
+            style="position: fixed; bottom: 0; left: 0; right: 0; margin: 0 auto; 
+            z-index: 9999; pointer-events: none; 
+            text-align: center; padding: 6px 0; 
+            color: #666; font-size: 11px; font-family: sans-serif; 
+            background: rgba(255,255,255,0.8);">
+            <span 
+                style="pointer-events: auto;">
+            <p style="margin: 3px 0;"><a href="index.html" style="color: #0000ee; text-decoration: none; font-weight: bold;">Back to Index</a></p>
+&copy; 2026 Shunsuke Takano | 
+                Licensed under <a href="https://opensource.org" target="_blank">MIT License</a> | 
+                <a href="https://github.com/shunsuketakano" target="_blank">GitHub/shunsuketakano</a>
+            </span>
+        </footer>
+    
