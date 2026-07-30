@@ -24,8 +24,8 @@
         }
     </style>
     
-<div id="3dmolviewer_17825413674694982"  style="position: relative; width: 100%; height: 100%;">
-        <p id="3dmolwarning_17825413674694982" style="background-color:#ffcccc;color:black">3Dmol.js failed to load for some reason.  Please check your browser console for error messages.<br></p>
+<div id="3dmolviewer_17851517559054441"  style="position: relative; width: 100%; height: 100%;">
+        <p id="3dmolwarning_17851517559054441" style="background-color:#ffcccc;color:black">3Dmol.js failed to load for some reason.  Please check your browser console for error messages.<br></p>
         </div>
 <script>
 
@@ -56,30 +56,30 @@ $3Dmolpromise = null;
   $3Dmolpromise = loadScriptAsync('https://cdn.jsdelivr.net/npm/3dmol@2.5.5/build/3Dmol-min.js');
 }
 
-var viewer_17825413674694982 = null;
-var warn = document.getElementById("3dmolwarning_17825413674694982");
+var viewer_17851517559054441 = null;
+var warn = document.getElementById("3dmolwarning_17851517559054441");
 if(warn) {
     warn.parentNode.removeChild(warn);
 }
 $3Dmolpromise.then(function() {
-viewer_17825413674694982 = $3Dmol.createViewer(document.getElementById("3dmolviewer_17825413674694982"),{backgroundColor:"white"});
-viewer_17825413674694982.zoomTo();
-	viewer_17825413674694982.setBackgroundColor("white");
-	viewer_17825413674694982.addModel("\n     RDKit          3D\n\n 26 26  0  0  0  0  0  0  0  0999 V2000\n    3.2569    0.1527   -3.6648 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.3992    0.0457   -2.1741 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.5681    0.2717   -1.5498 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.7378    0.2001   -0.0574 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.3974    0.2677    0.7116 C   0  0  1  0  0  0  0  0  0  0  0  0\n    2.3957   -0.6964    0.0529 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.1505   -0.3305   -1.4160 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.4876    0.0360    2.2208 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.5182   -0.5536    2.8515 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.3220    0.5601    3.0243 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.5039    0.9052   -3.9204 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.9464   -0.8085   -4.0869 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.1957    0.4423   -4.1484 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.4575    0.5197   -2.1244 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.3786    1.0293    0.2668 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.2758   -0.7305    0.1568 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.0168    1.2919    0.5782 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.4326   -0.6938    0.5758 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.7799   -1.7239    0.1129 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.6598   -1.1801   -1.9060 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.4520    0.5144   -1.4633 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.3850   -0.9431    2.3303 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.5236   -0.6750    3.9314 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.4744    0.4364    4.1020 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.1800    1.6291    2.8348 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.4000    0.0332    2.7616 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  2  3  2  0\n  3  4  1  0\n  4  5  1  0\n  5  6  1  0\n  6  7  1  0\n  5  8  1  0\n  8  9  2  0\n  8 10  1  0\n  7  2  1  0\n  1 11  1  0\n  1 12  1  0\n  1 13  1  0\n  3 14  1  0\n  4 15  1  0\n  4 16  1  0\n  5 17  1  1\n  6 18  1  0\n  6 19  1  0\n  7 20  1  0\n  7 21  1  0\n  9 22  1  0\n  9 23  1  0\n 10 24  1  0\n 10 25  1  0\n 10 26  1  0\nM  END\n","mol");
-	viewer_17825413674694982.setStyle({"model": 0},{"stick": {"colorscheme": "Jmol", "radius": 0.2}, "sphere": {"colorscheme": "Jmol", "scale": 0.0}});
-	viewer_17825413674694982.setStyle({"model": 0, "elem": "C"},{"stick": {"color": "orange", "radius": 0.2}, "sphere": {"color": "orange", "scale": 0.0}});
-	viewer_17825413674694982.setStyle({"model": 0, "elem": "H"},{"stick": {"color": "white", "radius": 0.2}, "sphere": {"color": "white", "scale": 0.0}});
-	viewer_17825413674694982.addSurface(1,{"opacity": 0.5, "color": "orange"});
-	viewer_17825413674694982.addModel("\n     RDKit          3D\n\n 26 26  0  0  0  0  0  0  0  0999 V2000\n   -3.2569    0.1527   -3.6648 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.3992    0.0457   -2.1741 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.5681    0.2717   -1.5498 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.7378    0.2001   -0.0574 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.3974    0.2677    0.7116 C   0  0  2  0  0  0  0  0  0  0  0  0\n   -2.3957   -0.6964    0.0529 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.1505   -0.3305   -1.4160 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.4876    0.0360    2.2208 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.5182   -0.5536    2.8515 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.3220    0.5601    3.0243 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.5039    0.9052   -3.9204 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.9464   -0.8085   -4.0869 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.1957    0.4423   -4.1484 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -5.4575    0.5197   -2.1244 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -5.3786    1.0293    0.2668 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -5.2758   -0.7305    0.1568 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.0168    1.2919    0.5782 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.4326   -0.6938    0.5758 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.7799   -1.7239    0.1129 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.6598   -1.1801   -1.9060 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.4520    0.5144   -1.4633 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -5.3850   -0.9431    2.3303 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.5236   -0.6750    3.9314 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.4744    0.4364    4.1020 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.1800    1.6291    2.8348 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.4000    0.0332    2.7616 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  2  3  2  0\n  3  4  1  0\n  4  5  1  0\n  5  6  1  0\n  6  7  1  0\n  5  8  1  0\n  8  9  2  0\n  8 10  1  0\n  7  2  1  0\n  1 11  1  0\n  1 12  1  0\n  1 13  1  0\n  3 14  1  0\n  4 15  1  0\n  4 16  1  0\n  5 17  1  6\n  6 18  1  0\n  6 19  1  0\n  7 20  1  0\n  7 21  1  0\n  9 22  1  0\n  9 23  1  0\n 10 24  1  0\n 10 25  1  0\n 10 26  1  0\nM  END\n","mol");
-	viewer_17825413674694982.setStyle({"model": 1},{"stick": {"colorscheme": "Jmol", "radius": 0.2}, "sphere": {"colorscheme": "Jmol", "scale": 0.0}});
-	viewer_17825413674694982.setStyle({"model": 1, "elem": "C"},{"stick": {"color": "yellow", "radius": 0.2}, "sphere": {"color": "yellow", "scale": 0.0}});
-	viewer_17825413674694982.setStyle({"model": 1, "elem": "H"},{"stick": {"color": "white", "radius": 0.2}, "sphere": {"color": "white", "scale": 0.0}});
-	viewer_17825413674694982.addSurface(1,{"opacity": 0.5, "color": "yellow"});
-	viewer_17825413674694982.rotate(90,"x");
-	viewer_17825413674694982.zoomTo();
-	viewer_17825413674694982.zoom(0.85,0);
-	viewer_17825413674694982.addScalebar();
-viewer_17825413674694982.render();
+viewer_17851517559054441 = $3Dmol.createViewer(document.getElementById("3dmolviewer_17851517559054441"),{backgroundColor:"white"});
+viewer_17851517559054441.zoomTo();
+	viewer_17851517559054441.setBackgroundColor("white");
+	viewer_17851517559054441.addModel("\n     RDKit          3D\n\n 26 26  0  0  0  0  0  0  0  0999 V2000\n    3.2978   -0.2490    3.1160 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.8617    0.0543    1.7521 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.7832    1.2733    1.2009 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.3139    1.6442   -0.1620 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.6682    0.4318   -1.0565 C   0  0  1  0  0  0  0  0  0  0  0  0\n    5.3443   -0.6598   -0.1895 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.5143   -1.1010    1.0245 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.5009   -0.0798   -1.8993 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.6988   -0.3735   -3.1905 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.1297   -0.2379   -1.2825 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.8176    0.6267    3.5622 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.0822   -0.5951    3.8024 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.5531   -1.0551    3.0662 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.3135    2.0765    1.7690 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.2145    2.2642   -0.0355 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.5936    2.2930   -0.6778 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.4265    0.7652   -1.7747 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.5943   -1.5244   -0.8137 H   0  0  0  0  0  0  0  0  0  0  0  0\n    6.2943   -0.2455    0.1734 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.1587   -1.6515    1.7247 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.7415   -1.8247    0.7254 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.6702   -0.2513   -3.6631 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.8976   -0.7502   -3.8207 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.7806    0.6981   -0.8325 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.1197   -0.9842   -0.4812 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.4000   -0.5443   -2.0372 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  2  3  2  0\n  3  4  1  0\n  4  5  1  0\n  5  6  1  0\n  6  7  1  0\n  5  8  1  0\n  8  9  2  0\n  8 10  1  0\n  7  2  1  0\n  1 11  1  0\n  1 12  1  0\n  1 13  1  0\n  3 14  1  0\n  4 15  1  0\n  4 16  1  0\n  5 17  1  6\n  6 18  1  0\n  6 19  1  0\n  7 20  1  0\n  7 21  1  0\n  9 22  1  0\n  9 23  1  0\n 10 24  1  0\n 10 25  1  0\n 10 26  1  0\nM  END\n","mol");
+	viewer_17851517559054441.setStyle({"model": 0},{"stick": {"colorscheme": "Jmol", "radius": 0.2}, "sphere": {"colorscheme": "Jmol", "scale": 0.0}});
+	viewer_17851517559054441.setStyle({"model": 0, "elem": "C"},{"stick": {"color": "orange", "radius": 0.2}, "sphere": {"color": "orange", "scale": 0.0}});
+	viewer_17851517559054441.setStyle({"model": 0, "elem": "H"},{"stick": {"color": "white", "radius": 0.2}, "sphere": {"color": "white", "scale": 0.0}});
+	viewer_17851517559054441.addSurface(1,{"opacity": 0.5, "color": "orange"});
+	viewer_17851517559054441.addModel("\n     RDKit          3D\n\n 26 26  0  0  0  0  0  0  0  0999 V2000\n   -3.2978   -0.2490    3.1160 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.8617    0.0543    1.7521 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.7832    1.2733    1.2009 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.3139    1.6442   -0.1620 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.6682    0.4318   -1.0565 C   0  0  2  0  0  0  0  0  0  0  0  0\n   -5.3443   -0.6598   -0.1895 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.5143   -1.1010    1.0245 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.5009   -0.0798   -1.8993 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.6988   -0.3735   -3.1905 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.1297   -0.2379   -1.2825 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.8176    0.6267    3.5622 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.0822   -0.5951    3.8024 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.5531   -1.0551    3.0662 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.3135    2.0765    1.7690 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -5.2145    2.2642   -0.0355 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.5936    2.2930   -0.6778 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -5.4265    0.7652   -1.7747 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -5.5943   -1.5244   -0.8137 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -6.2943   -0.2455    0.1734 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -5.1587   -1.6515    1.7247 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.7415   -1.8247    0.7254 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.6702   -0.2513   -3.6631 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.8976   -0.7502   -3.8207 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.7806    0.6981   -0.8325 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.1197   -0.9842   -0.4812 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.4000   -0.5443   -2.0372 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  2  3  2  0\n  3  4  1  0\n  4  5  1  0\n  5  6  1  0\n  6  7  1  0\n  5  8  1  0\n  8  9  2  0\n  8 10  1  0\n  7  2  1  0\n  1 11  1  0\n  1 12  1  0\n  1 13  1  0\n  3 14  1  0\n  4 15  1  0\n  4 16  1  0\n  5 17  1  1\n  6 18  1  0\n  6 19  1  0\n  7 20  1  0\n  7 21  1  0\n  9 22  1  0\n  9 23  1  0\n 10 24  1  0\n 10 25  1  0\n 10 26  1  0\nM  END\n","mol");
+	viewer_17851517559054441.setStyle({"model": 1},{"stick": {"colorscheme": "Jmol", "radius": 0.2}, "sphere": {"colorscheme": "Jmol", "scale": 0.0}});
+	viewer_17851517559054441.setStyle({"model": 1, "elem": "C"},{"stick": {"color": "yellow", "radius": 0.2}, "sphere": {"color": "yellow", "scale": 0.0}});
+	viewer_17851517559054441.setStyle({"model": 1, "elem": "H"},{"stick": {"color": "white", "radius": 0.2}, "sphere": {"color": "white", "scale": 0.0}});
+	viewer_17851517559054441.addSurface(1,{"opacity": 0.5, "color": "yellow"});
+	viewer_17851517559054441.rotate(90,"x");
+	viewer_17851517559054441.zoomTo();
+	viewer_17851517559054441.zoom(0.85,0);
+	viewer_17851517559054441.addScalebar();
+viewer_17851517559054441.render();
 });
 </script>
         <header 
@@ -90,7 +90,7 @@ viewer_17825413674694982.render();
             <h1 style="margin: 0; padding: 0; 
                 font-family: sans-serif; font-size: 24px; color: #000000; font-weight: bold; 
                 letter-spacing: 0.5px;">
-                    Limonene
+                    Limonene<br>B3LYP/6-31G(d,p)
             </h1>
         </header>
     
@@ -103,10 +103,8 @@ viewer_17825413674694982.render();
             background: rgba(255,255,255,0.8);">
             <span 
                 style="pointer-events: auto;">
-            <p style="margin: 3px 0;"><a href="index.html" style="color: #e67e22; text-decoration: none; font-weight: bold;">Back to Index</a></p>
-
-
-                &copy; 2026 Shunsuke Takano | 
+            <p style="margin: 3px 0;"><a href="index.html" style="color: #0000ee; text-decoration: none; font-weight: bold;">Back to Index</a></p>
+&copy; 2026 Shunsuke Takano | 
                 Licensed under <a href="https://opensource.org" target="_blank">MIT License</a> | 
                 <a href="https://github.com/shunsuketakano" target="_blank">GitHub/shunsuketakano</a>
             </span>

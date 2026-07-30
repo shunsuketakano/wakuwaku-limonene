@@ -1,0 +1,112 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+ 
+    <style>
+        /* 画面自体の余白をなくし、はみ出し（スクロールバー）を完全に禁止する */
+        html, body {
+            margin: 0 !important;
+            padding: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            overflow: hidden !important;
+            position: fixed !important;
+            background-color: white; /* 背景色 */
+        }
+        
+        /* py3Dmolが生成するすべてのコンテナ要素を強制的に画面ぴったりに引き伸ばす */
+        div[id^="3dmolviewer"], div.viewer_3dmol, [id^="3dmol"] {
+            width: 100vw !important;
+            height: 100vh !important;
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+    </style>
+    
+<div id="3dmolviewer_178529588685919"  style="position: relative; width: 100%; height: 100%;">
+        <p id="3dmolwarning_178529588685919" style="background-color:#ffcccc;color:black">3Dmol.js failed to load for some reason.  Please check your browser console for error messages.<br></p>
+        </div>
+<script>
+
+var loadScriptAsync = function(uri){
+  return new Promise((resolve, reject) => {
+    //this is to ignore the existence of requirejs amd
+    var savedexports, savedmodule;
+    if (typeof exports !== 'undefined') savedexports = exports;
+    else exports = {}
+    if (typeof module !== 'undefined') savedmodule = module;
+    else module = {}
+
+    var tag = document.createElement('script');
+    tag.src = uri;
+    tag.async = true;
+    tag.onload = () => {
+        exports = savedexports;
+        module = savedmodule;
+        resolve();
+    };
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+});
+};
+
+if(typeof $3Dmolpromise === 'undefined') {
+$3Dmolpromise = null;
+  $3Dmolpromise = loadScriptAsync('https://cdn.jsdelivr.net/npm/3dmol@2.5.5/build/3Dmol-min.js');
+}
+
+var viewer_178529588685919 = null;
+var warn = document.getElementById("3dmolwarning_178529588685919");
+if(warn) {
+    warn.parentNode.removeChild(warn);
+}
+$3Dmolpromise.then(function() {
+viewer_178529588685919 = $3Dmol.createViewer(document.getElementById("3dmolviewer_178529588685919"),{backgroundColor:"white"});
+viewer_178529588685919.zoomTo();
+	viewer_178529588685919.setBackgroundColor("white");
+	viewer_178529588685919.addModel("\n     RDKit          3D\n\n 24 24  0  0  0  0  0  0  0  0999 V2000\n    5.7068    0.2947   -0.9334 C   0  0  2  0  0  0  0  0  0  0  0  0\n    4.4796   -0.3257   -1.6031 C   0  0  1  0  0  0  0  0  0  0  0  0\n    3.2175    0.1627   -0.9031 C   0  0  2  0  0  0  0  0  0  0  0  0\n    3.2931   -0.1085    0.5968 C   0  0  1  0  0  0  0  0  0  0  0  0\n    4.5841    0.4814    1.1810 C   0  0  1  0  0  0  0  0  0  0  0  0\n    4.8199    0.0871    2.6364 C   0  0  1  0  0  0  0  0  0  0  0  0\n    7.6068    0.2776   -1.3025 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.6876    1.3907   -1.0549 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.1904   -0.2645   -3.4047 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.5583   -1.4179   -1.4927 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.9858   -0.2930   -2.3331 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.1363    1.2512   -1.0560 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.4000    0.2120    0.7823 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.3107   -1.1966    0.7562 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.5367    1.5794    1.1093 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.6443   -1.5837    2.1456 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.7065    0.6231    3.0056 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.9589    0.3907    3.2372 H   0  0  0  0  0  0  0  0  0  0  0  0\n    6.8369   -0.2639   -1.5263 O   0  0  0  0  0  0  0  0  0  0  0  0\n    4.3846    0.0486   -2.9694 O   0  0  0  0  0  0  0  0  0  0  0  0\n    2.0471   -0.4867   -1.3870 O   0  0  0  0  0  0  0  0  0  0  0  0\n    2.1907    0.4821    1.2723 O   0  0  0  0  0  0  0  0  0  0  0  0\n    5.7163   -0.0219    0.4579 O   0  0  0  0  0  0  0  0  0  0  0  0\n    4.9670   -1.3187    2.7857 O   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  1  8  1  1\n  1 19  1  0\n  1 23  1  0\n  2  3  1  0\n  2 10  1  6\n  2 20  1  0\n  3  4  1  0\n  3 12  1  1\n  3 21  1  0\n  4  5  1  0\n  4 14  1  6\n  4 22  1  0\n  5  6  1  0\n  5 15  1  1\n  5 23  1  0\n  6 17  1  1\n  6 18  1  0\n  6 24  1  0\n  7 19  1  0\n  9 20  1  0\n 11 21  1  0\n 13 22  1  0\n 16 24  1  0\nM  END\n","mol");
+	viewer_178529588685919.setStyle({"model": 0},{"stick": {"colorscheme": "Jmol", "radius": 0.2}, "sphere": {"colorscheme": "Jmol", "scale": 0.0}});
+	viewer_178529588685919.setStyle({"model": 0, "elem": "C"},{"stick": {"color": "orange", "radius": 0.2}, "sphere": {"color": "orange", "scale": 0.0}});
+	viewer_178529588685919.setStyle({"model": 0, "elem": "H"},{"stick": {"color": "white", "radius": 0.2}, "sphere": {"color": "white", "scale": 0.0}});
+	viewer_178529588685919.addSurface(1,{"opacity": 0.5, "color": "orange"});
+	viewer_178529588685919.addModel("\n     RDKit          3D\n\n 24 24  0  0  0  0  0  0  0  0999 V2000\n   -5.7068    0.2947   -0.9334 C   0  0  1  0  0  0  0  0  0  0  0  0\n   -4.4796   -0.3257   -1.6031 C   0  0  2  0  0  0  0  0  0  0  0  0\n   -3.2175    0.1627   -0.9031 C   0  0  1  0  0  0  0  0  0  0  0  0\n   -3.2931   -0.1085    0.5968 C   0  0  2  0  0  0  0  0  0  0  0  0\n   -4.5841    0.4814    1.1810 C   0  0  2  0  0  0  0  0  0  0  0  0\n   -4.8199    0.0871    2.6364 C   0  0  2  0  0  0  0  0  0  0  0  0\n   -7.6068    0.2776   -1.3025 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -5.6876    1.3907   -1.0549 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -5.1904   -0.2645   -3.4047 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.5583   -1.4179   -1.4927 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.9858   -0.2930   -2.3331 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.1363    1.2512   -1.0560 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.4000    0.2120    0.7823 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.3107   -1.1966    0.7562 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.5367    1.5794    1.1093 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -5.6443   -1.5837    2.1456 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -5.7065    0.6231    3.0056 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.9589    0.3907    3.2372 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -6.8369   -0.2639   -1.5263 O   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.3846    0.0486   -2.9694 O   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.0471   -0.4867   -1.3870 O   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.1907    0.4821    1.2723 O   0  0  0  0  0  0  0  0  0  0  0  0\n   -5.7163   -0.0219    0.4579 O   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.9670   -1.3187    2.7857 O   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  1  8  1  6\n  1 19  1  0\n  1 23  1  0\n  2  3  1  0\n  2 10  1  1\n  2 20  1  0\n  3  4  1  0\n  3 12  1  6\n  3 21  1  0\n  4  5  1  0\n  4 14  1  1\n  4 22  1  0\n  5  6  1  0\n  5 15  1  6\n  5 23  1  0\n  6 17  1  6\n  6 18  1  0\n  6 24  1  0\n  7 19  1  0\n  9 20  1  0\n 11 21  1  0\n 13 22  1  0\n 16 24  1  0\nM  END\n","mol");
+	viewer_178529588685919.setStyle({"model": 1},{"stick": {"colorscheme": "Jmol", "radius": 0.2}, "sphere": {"colorscheme": "Jmol", "scale": 0.0}});
+	viewer_178529588685919.setStyle({"model": 1, "elem": "C"},{"stick": {"color": "yellow", "radius": 0.2}, "sphere": {"color": "yellow", "scale": 0.0}});
+	viewer_178529588685919.setStyle({"model": 1, "elem": "H"},{"stick": {"color": "white", "radius": 0.2}, "sphere": {"color": "white", "scale": 0.0}});
+	viewer_178529588685919.addSurface(1,{"opacity": 0.5, "color": "yellow"});
+	viewer_178529588685919.rotate(90,"x");
+	viewer_178529588685919.zoomTo();
+	viewer_178529588685919.zoom(0.85,0);
+	viewer_178529588685919.addScalebar();
+viewer_178529588685919.render();
+});
+</script>
+        <header 
+            style="position: fixed; top: 20px; left: 50%; 
+            transform: translateX(-50%); 
+            z-index: 9999; pointer-events: none; 
+            text-align: center; width: 100%;">
+            <h1 style="margin: 0; padding: 0; 
+                font-family: sans-serif; font-size: 24px; color: #000000; font-weight: bold; 
+                letter-spacing: 0.5px;">
+                    betaGlucose<br>CCDC (1169301) B3LYP/6-31G(d,p)/ddCOSMO(H2O)
+            </h1>
+        </header>
+    
+
+        <footer 
+            style="position: fixed; bottom: 0; left: 0; right: 0; margin: 0 auto; 
+            z-index: 9999; pointer-events: none; 
+            text-align: center; padding: 6px 0; 
+            color: #666; font-size: 11px; font-family: sans-serif; 
+            background: rgba(255,255,255,0.8);">
+            <span 
+                style="pointer-events: auto;">
+            <p style="margin: 3px 0;"><a href="index.html" style="color: #0000ee; text-decoration: none; font-weight: bold;">Back to Index</a></p>
+&copy; 2026 Shunsuke Takano | 
+                Licensed under <a href="https://opensource.org" target="_blank">MIT License</a> | 
+                <a href="https://github.com/shunsuketakano" target="_blank">GitHub/shunsuketakano</a>
+            </span>
+        </footer>
+    

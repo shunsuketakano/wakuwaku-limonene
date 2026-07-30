@@ -1,86 +1,119 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <style>
-        body { font-family: sans-serif; max-width: 800px; margin: 0 auto; padding: 30px 20px; color: #333; background-color: #fafafa; }
-        header { margin-bottom: 25px; }
-        .site-title { font-size: 14px; color: #666; font-weight: normal; letter-spacing: 0.5px; margin-bottom: 5px; }
-        h1 { color: #111; font-size: 28px; margin-top: 0; margin-bottom: 5px; line-height: 1.3; }
-        h1 small { font-size: 15px; color: #555; font-weight: normal; display: block; margin-top: 5px; }
-        .subtitle-line { height: 3px; background: linear-gradient(to right, #e67e22, #f1c40f); margin-top: 15px; border-radius: 2px; }
-        .intro-box { background: #fff; border: 1px solid #e0e0e0; border-radius: 6px; padding: 18px 20px; margin-bottom: 30px; font-size: 14px; line-height: 1.6; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-        .intro-box strong { color: #e67e22; font-size: 16px; }
-        ul { padding-left: 0; list-style: none; }
-        li { margin: 12px 0; background: #fff; border: 1px solid #e8e8e8; border-radius: 4px; padding: 12px 15px; transition: transform 0.2s, box-shadow 0.2s; }
-        li:hover { transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0,0,0,0.08); border-color: #e67e22; }
-        a { color: #e67e22; text-decoration: none; font-weight: bold; display: block; }
-    </style>
+<meta charset="UTF-8">
+<style>
+body{
+    font-family:sans-serif;
+    max-width:800px;
+    margin:0 auto;
+    padding:30px 20px;
+    color:#333;
+    background:#fafafa;
+}
+header{margin-bottom:25px;}
+h1{
+    color:#111;
+    font-size:28px;
+    margin-bottom:5px;
+}
+.subtitle-line{
+    height:3px;
+    background:linear-gradient(to right,#e67e22,#f1c40f);
+    margin-top:15px;
+    border-radius:2px;
+}
+ul{
+    list-style:none;
+    padding-left:0;
+}
+li{
+    margin:12px 0;
+    background:#fff;
+    border:1px solid #e8e8e8;
+    border-radius:4px;
+    padding:12px 15px;
+    transition:.2s;
+}
+li:hover{
+    transform:translateY(-2px);
+    box-shadow:0 4px 10px rgba(0,0,0,.08);
+}
+a{
+    color:#e67e22;
+    text-decoration:none;
+    font-weight:bold;
+}
+</style>
 </head>
+
 <body>
-    <header>
-        <h1>キラル分子の3Dモデル（量子化学・分子力学計算による）</h1>
-        <div class="subtitle-line"></div>
-    </header>
-    <ul>
-        <a href="scentgram.pdf">見本図：どんな香りに似ているかな？</a>
-        <li><a href="3MHA_PBE0_def2-svp.html">3MHA_PBE0_def2-svp.html</a></li>
-        <li><a href="3MHA_PBE0_def2-svp_ddCOSMO(EtOH).html">3MHA_PBE0_def2-svp_ddCOSMO(EtOH).html</a></li>
-        <li><a href="3MHA_PBE0_def2-svp_ddCOSMO(H2O).html">3MHA_PBE0_def2-svp_ddCOSMO(H2O).html</a></li>
-        <li><a href="Cholesteryl_chloride_B3LYP_6-31g(d,p).html">Cholesteryl_chloride_B3LYP_6-31g(d,p).html</a></li>
-        <li><a href="Cholesteryl_chloride_MMFF.html">Cholesteryl_chloride_MMFF.html</a></li>
-        <li><a href="Cholesteryl_chloride_PBE0_def2-svp.html">Cholesteryl_chloride_PBE0_def2-svp.html</a></li>
-        <li><a href="Furaneol_PBE0_def2-svp.html">Furaneol_PBE0_def2-svp.html</a></li>
-        <li><a href="Glucose_B3LYP_6-31g(d,p).html">Glucose_B3LYP_6-31g(d,p).html</a></li>
-        <li><a href="Glucose_PBE0_def2-svp.html">Glucose_PBE0_def2-svp.html</a></li>
-        <li><a href="Lactic_acid_B3LYP_6-31g(d,p).html">Lactic_acid_B3LYP_6-31g(d,p).html</a></li>
-        <li><a href="Lactic_acid_PBE0_def2-svp.html">Lactic_acid_PBE0_def2-svp.html</a></li>
-        <li><a href="Limonene_B3LYP_6-31g(d,p).html">Limonene_B3LYP_6-31g(d,p).html</a></li>
-        <li><a href="Limonene_MMFF.html">Limonene_MMFF.html</a></li>
-        <li><a href="Limonene_PBE0_def2-svp.html">Limonene_PBE0_def2-svp.html</a></li>
-        <li><a href="Linalool_PBE0_def2-svp.html">Linalool_PBE0_def2-svp.html</a></li>
-        <li><a href="Linalool_PBE0_def2-svp_ddCOSMO(H2O).html">Linalool_PBE0_def2-svp_ddCOSMO(H2O).html</a></li>
-        <li><a href="Lisdexamfetamine_B3LYP_6-31g(d,p).html">Lisdexamfetamine_B3LYP_6-31g(d,p).html</a></li>
-        <li><a href="Lisdexamfetamine_PBE0_def2-svp.html">Lisdexamfetamine_PBE0_def2-svp.html</a></li>
-        <li><a href="RM734_PBE0_def2-svp.html">RM734_PBE0_def2-svp.html</a></li>
-        <li><a href="Rose_oxide_B3LYP_6-31g(d,p).html">Rose_oxide_B3LYP_6-31g(d,p).html</a></li>
-        <li><a href="Rose_oxide_MMFF94.html">Rose_oxide_MMFF94.html</a></li>
-        <li><a href="Rose_oxide_PBE0_def2-svp.html">Rose_oxide_PBE0_def2-svp.html</a></li>
-        <li><a href="Sucrose_PBE0_def2-svp_ddCOSMO(H2O).html">Sucrose_PBE0_def2-svp_ddCOSMO(H2O).html</a></li>
-        <li><a href="Sucrose_vacuum_PBE0_def2-svp.html">Sucrose_vacuum_PBE0_def2-svp.html</a></li>
-        <li><a href="Thalidomide_B3LYP_6-31g(d,p).html">Thalidomide_B3LYP_6-31g(d,p).html</a></li>
-        <li><a href="Thalidomide_PBE0_def2-svp.html">Thalidomide_PBE0_def2-svp.html</a></li>
-    </ul>
-    <div style="height: 30px;"></div><!-- フッターの被り防止用ダミー行 -->
-    </ul>
+
+<header>
+<h1>キラル分子の3Dモデル（量子化学・分子力学計算による）</h1>
+<div class="subtitle-line"></div>
+</header>
+
+<ul>
+<li><a href="scentgram.pdf">見本図：どんな香りに似ているかな？</a></li>
+<li><a href="3MHA_B3LYP_6-31g(d,p).html">3MHA B3LYP/6-31G(d,p)</a></li>
+<li><a href="Cholesteryl_chloride_B3LYP_6-31g(d,p).html">Cholesteryl chloride B3LYP/6-31G(d,p)</a></li>
+<li><a href="Furaneol_B3LYP_6-31g(d,p).html">Furaneol B3LYP/6-31G(d,p)</a></li>
+<li><a href="Lactic_acid_B3LYP_6-31g(d,p).html">Lactic acid B3LYP/6-31G(d,p)</a></li>
+<li><a href="Limonene_B3LYP_6-31g(d,p).html">Limonene B3LYP/6-31G(d,p)</a></li>
+<li><a href="Limonene_MMFF94.html">Limonene MMFF94</a></li>
+<li><a href="Linalool_B3LYP_6-31g(d,p).html">Linalool B3LYP/6-31G(d,p)</a></li>
+<li><a href="Lisdexamfetamine_B3LYP_6-31g(d,p)_ddCOSMO(H2O).html">Lisdexamfetamine B3LYP/6-31G(d,p)/ddCOSMO(H2O)</a></li>
+<li><a href="Lisdexamfetamine_MMFF94.html">Lisdexamfetamine MMFF94</a></li>
+<li><a href="Rose_oxide_B3LYP_6-31g(d,p).html">Rose oxide B3LYP/6-31G(d,p)</a></li>
+<li><a href="Serine_B3LYP_6-31g(d,p).html">Serine B3LYP/6-31G(d,p)</a></li>
+<li><a href="Sucrose_1263568_B3LYP_6-31g(d,p)_ddCOSMO(H2O).html">Sucrose CCDC (1263568) B3LYP/6-31G(d,p)/ddCOSMO(H2O)</a></li>
+<li><a href="Sucrose_1263568_original.html">Sucrose CCDC (1263568)</a></li>
+<li><a href="Sucrose_B3LYP_6-31g(d,p)_ddCOSMO(H2O).html">Sucrose B3LYP/6-31G(d,p)/ddCOSMO(H2O)</a></li>
+<li><a href="Thalidomide_B3LYP_6-31g(d,p).html">Thalidomide B3LYP/6-31G(d,p)</a></li>
+<li><a href="alphaGlucose_1169298_original.html">alphaGlucose CCDC (1169298)</a></li>
+<li><a href="betaGlucose_1169301_B3LYP_6-31g(d,p)_ddCOSMO(H2O).html">betaGlucose CCDC (1169301) B3LYP/6-31G(d,p)/ddCOSMO(H2O)</a></li>
+<li><a href="betaGlucose_1169301_original.html">betaGlucose CCDC (1169301)</a></li>
+
+</ul>
+
+<div style="height:30px;"></div>
+
 
     <footer
-        style="position: fixed; bottom: 0; left: 50%; transform: translateX(-50%); width: 100vw;
-        z-index: 9999; pointer-events: none;
+        style="position: fixed; bottom: 0; left: 50%; transform: translateX(-50%);
+        width: 100vw; z-index: 9999; pointer-events: none;
         text-align: center; padding: 8px 0;
         color: #666; font-size: 11px;
         font-family: 'Helvetica Neue', Arial, sans-serif;
         background: rgba(255,255,255,0.9);
         box-sizing: border-box;
         line-height: 1.5;">
-        
-        <!-- 1行目：新しく追加する付記 -->
+
         <div style="pointer-events: auto; white-space: nowrap; color: #888; font-size: 11px; margin-top: 2px;">
-            おもしろワクワク化学の世界 '26広島化学展<!-- 付記したいテキストをここへ（例: Additional information or notes here） -->
+            おもしろワクワク化学の世界 '26広島化学展
         </div>
 
-        <!-- 2行目：新しく追加する付記 -->
         <div style="pointer-events: auto; white-space: nowrap; color: #888; font-size: 11px; margin-top: 2px;">
-            「香りと光のキラリティ」by 広島大学 持続性に寄与するキラルノット超物質国際研究所（WPI-SKCM²）<!-- 付記したいテキストをここへ（例: Additional information or notes here） -->
+            「香りと光のキラリティ」by 広島大学 持続性に寄与するキラルノット超物質国際研究所（WPI-SKCM²）
         </div>
-        
-        <!-- 3行目：クレジットやリンク -->
+
         <div style="pointer-events: auto; white-space: nowrap;">
-            &copy; 2026 Shunsuke Takano | 
-            Licensed under <a href="https://opensource.org" target="_blank" style="color: #0000ee; display: inline; font-weight: normal; text-decoration: underline;">MIT License</a> | 
-            <a href="https://github.com/shunsuketakano" target="_blank" style="color: #0000ee; display: inline; font-weight: normal; text-decoration: underline;">GitHub/shunsuketakano</a>
+            &copy; 2026 Shunsuke Takano |
+            Licensed under
+            <a href="https://opensource.org"
+               target="_blank"
+               style="color:#0000ee;text-decoration:underline;">
+               MIT License
+            </a> |
+            <a href="https://github.com/shunsuketakano"
+               target="_blank"
+               style="color:#0000ee;text-decoration:underline;">
+               GitHub/shunsuketakano
+            </a>
         </div>
     </footer>
+
 
 </body>
 </html>
