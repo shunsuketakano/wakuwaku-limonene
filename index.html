@@ -3,8 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <style>
+:root {
+    --font-main:
+        "Helvetica Neue",
+        Helvetica,
+        "Hiragino Kaku Gothic ProN",
+        "Yu Gothic",
+        YuGothic,
+        sans-serif
+}
 body{
-    font-family:sans-serif;
+    font-family: var(--font-main);
     max-width:800px;
     margin:0 auto;
     padding:30px 20px;
@@ -43,6 +52,9 @@ a{
     color:#e67e22;
     text-decoration:none;
     font-weight:bold;
+}
+footer a{
+    font-weight:normal;
 }
 </style>
 </head>
@@ -88,7 +100,7 @@ a{
         width: 100vw; z-index: 9999; pointer-events: none;
         text-align: center; padding: 8px 0;
         color: #666; font-size: 11px;
-        font-family: 'Helvetica Neue', Arial, sans-serif;
+        font-family: var(--font-main);
         background: rgba(255,255,255,0.9);
         box-sizing: border-box;
         line-height: 1.5;">
